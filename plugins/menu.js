@@ -14,13 +14,13 @@ exports.run = {
          clips.menu = clips.menu ? clips.menu : {}
          const user = global.db.users.find(v => v.jid == m.sender);
          const id = m.chat
-         const info = `ム  *U S E R I N F O*
+         const info = `ム  *{ SlrmyApi } User Info*
 
 ⋇  *Runtime* : [ ${Func.toTime(process.uptime() * 1000)} ]
 ⋇  *Premium* : ${(user.premium ? '✓' : '×')}
 ⋇  *Limit* : ${Func.formatNumber(user.limit)}
 ⋇  *Level* : ${Func.level(user.point, env.multiplier)[0]} (${Func.rolex(Func.level(user.point, env.multiplier)[0])})
-⋇  *Rest Api* : api.nexon.my.id`
+⋇  *Rest Api* : api.slrmyshop.com.my`
          const local_size = fs.existsSync('./' + env.database + '.json') ? await Func.getSize(fs.statSync('./' + env.database + '.json').size) : ''
          let _uptime = process.uptime() * 1000
          const library = JSON.parse(require('fs').readFileSync('./package.json', 'utf-8'))
@@ -231,7 +231,7 @@ exports.run = {
             const buttons = [{
                   name: 'quick_reply',
                   buttonParamsJson: JSON.stringify({
-                      display_text: 'Script',
+                      display_text: 'Official API By SlrmyShop',
                       id: `${isPrefix}sc`
                   })
                }, {
@@ -499,7 +499,7 @@ exports.run = {
             const buttons = [{
                   name: 'quick_reply',
                   buttonParamsJson: JSON.stringify({
-                      display_text: 'Script',
+                      display_text: 'Official API By SlrmyShop',
                       id: `${isPrefix}sc`
                   })
                }, {
